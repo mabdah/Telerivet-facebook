@@ -660,6 +660,7 @@ html{
 }
 .background_user-selected {
   background-color: #d9dadf;
+  
 }
 
 .sel_st_img-container {
@@ -714,8 +715,9 @@ html{
   height: 85vh;
   position: relative;
   overflow: hidden;
+  background-color: grey;
 }
-#storie_content-image {
+.storie_content-image {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -723,7 +725,24 @@ html{
   top: 0;
   z-index: 6;
 }
-
+#sponsored-post{
+   
+    top: 50%;                
+    transform: translate(0, -50%); 
+    width: 100%;
+    height: auto;
+   
+}
+.click-button{
+  padding: 10px 20px 10px 20px;
+  background-color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 15px;
+  color:rgb(50, 98, 231);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .loading_var {
   align-self: center;
   height: 5px;
@@ -764,6 +783,8 @@ html{
 }
 .active_image-username {
   font-size: 15px;
+  margin: 0;
+  margin-bottom: 4px;
   margin-left: 8px;
 }
 .active_storie-image {

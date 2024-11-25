@@ -99,10 +99,10 @@ function make_post(){
 
                             <div class="like_and_comment-btn">
                                 <div class="i_like_it">
-                                    <button class="like_post_btn"> <img src="./resources/like_post.png" alt=""> Me gusta</button>
+                                    <button class="like_post_btn"> <img src="./resources/like_post.jpg" alt=""> Me gusta</button>
                                 </div>
                                 <div class="i_comment">
-                                    <button class="comment_post_btn"> <img src="./resources/comment_post.png" alt=""> Comentar</button>
+                                    <button class="comment_post_btn"> <img src="./resources/comment_post.jpg" alt=""> Comentar</button>
                                 </div>
                             </div>
 

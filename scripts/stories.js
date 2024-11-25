@@ -168,17 +168,20 @@ function select_storie(active_storie){
     }
 }
 
-const storie_image = document.getElementById("storie_content-image")
+const storie_image = document.querySelector(".storie_content-image")
 const active_storie_img = document.querySelector(".active_storie_img")
+const link = document.querySelector(".link")
 const active_storie_username = document.querySelector(".active_storie-username")
+const sponsor_username = document.querySelector(".sponsor")
+const button = document.querySelector(".click-button")
 
 function storie_number_one(){
     console.log("Story 1")
     active_storie = 1;
-
+   
     storie_image.src = "./resources/drone.jpg"   
     active_storie_img.src = "./resources/profile.jpg"
-    active_storie_username.textContent = "John Anderson"
+    active_storie_username.textContent = "Hari Bahadur Thapa"
 
     sombrear_background_storie1()
 }
@@ -186,11 +189,20 @@ function storie_number_one(){
 function storie_number_two(){
     console.log("Story 2")
     active_storie = 2;
-
-    storie_image.src = "./resources/poe.jpg"  
-    active_storie_img.src = "./resources/kevin.jpg"
-    active_storie_username.textContent = "Kevin Brown (L)"
-
+    storie_image.id = "sponsored-post";
+    link.href ="https://wa.me/14153166018?text=Hello,%20I%20would%20like%20to%20connect%20with%20you."
+    storie_image.src = "./resources/post.jpg"  
+    active_storie_img.src = "./resources/telerivetlogo.png"
+    active_storie_username.textContent = "Telerivet"
+    sponsor_username.textContent= "Sponsored"
+    button.textContent="CONTACT US"
+    button.style.position="absolute";
+    button.style.top= "90%";
+    button.style.left= "50%";
+    button.style.transform="translate(-50%, -50%)";
+    button.style.Zindex="7";
+    button.style.cursor="pointer";
+   
     sombrear_background_storie2()
 }
 
@@ -266,6 +278,7 @@ function sombrear_background_storie1(){
     storie_4.classList.remove("background_user-selected")
     storie_5.classList.remove("background_user-selected")
     storie_6.classList.remove("background_user-selected")
+    resetImageID();
 }
 
 function sombrear_background_storie2(){
@@ -275,6 +288,18 @@ function sombrear_background_storie2(){
     storie_4.classList.remove("background_user-selected")
     storie_5.classList.remove("background_user-selected")
     storie_6.classList.remove("background_user-selected")
+   
+}
+function resetImageID() {
+    if (storie_image.id) {
+        storie_image.removeAttribute("id"); // Remove the ID
+        sponsor_username.textContent =""
+        link.removeAttribute("href")
+        button.textContent=""
+        button.removeAttribute("style");
+
+    }
+
 }
 
 function sombrear_background_storie3(){
@@ -284,6 +309,7 @@ function sombrear_background_storie3(){
     storie_4.classList.remove("background_user-selected")
     storie_5.classList.remove("background_user-selected")
     storie_6.classList.remove("background_user-selected")
+    resetImageID();
 }
 
 function sombrear_background_storie4(){
@@ -293,6 +319,7 @@ function sombrear_background_storie4(){
     storie_4.classList.add("background_user-selected")
     storie_5.classList.remove("background_user-selected")
     storie_6.classList.remove("background_user-selected")
+    resetImageID();
 }
 
 function sombrear_background_storie5(){
@@ -302,6 +329,7 @@ function sombrear_background_storie5(){
     storie_4.classList.remove("background_user-selected")
     storie_5.classList.add("background_user-selected")
     storie_6.classList.remove("background_user-selected")
+    resetImageID();
 }
 
 function sombrear_background_storie6(){
@@ -311,6 +339,7 @@ function sombrear_background_storie6(){
     storie_4.classList.remove("background_user-selected")
     storie_5.classList.remove("background_user-selected")
     storie_6.classList.add("background_user-selected")
+    resetImageID();
 }
 
 
