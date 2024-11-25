@@ -190,7 +190,7 @@ function storie_number_two(){
     console.log("Story 2")
     active_storie = 2;
     storie_image.id = "sponsored-post";
-    link.href ="https://wa.me/14153166018?text=Hello,%20I%20would%20like%20to%20connect%20with%20you."
+    link.href ="https://wa.me/14153166018?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20Telerivet's%20WhatsApp%20offerings."
     storie_image.src = "./resources/post.jpg"  
     active_storie_img.src = "./resources/telerivetlogo.png"
     active_storie_username.textContent = "Telerivet"
