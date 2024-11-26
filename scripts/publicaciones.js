@@ -67,7 +67,7 @@ function make_post(){
                                 </figure>
                                 <div class="post_user-details">
                                     <div class="post_user_name-details">
-                                        <h4 class="post_user-name">John Anderson</h4>
+                                        <h4 class="post_user-name">Hari Bhadur Thapa</h4>
                                         <img src="./resources/triangle-grey.png" alt="" class="arrow-right">
                                         <h4 class="post_user-name">Tech Enthusiasts Group </h4>
                                     </div>
