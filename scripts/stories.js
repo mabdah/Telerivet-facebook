@@ -180,9 +180,9 @@ function storie_number_one(){
     console.log("Story 1")
     active_storie = 1;
    
-    storie_image.src = "./resources/drone.jpg"   
+    storie_image.src = "./resources/mountain.jpg"   
     active_storie_img.src = "./resources/profile.jpg"
-    active_storie_username.textContent = "Hari Bahadur Thapa"
+    active_storie_username.textContent = "Agastaya KC"
 
     sombrear_background_storie1()
 }
@@ -213,9 +213,9 @@ function storie_number_three(){
     console.log("Story 3")
     active_storie = 3;
     
-    storie_image.src = "./resources/ferrari.jpg" 
+    storie_image.src = "./resources/coffee.jpg" 
     active_storie_img.src = "./resources/abilio.jpg"
-    active_storie_username.textContent = "Abel Johnson"
+    active_storie_username.textContent = "Reshika Pradhan"
 
     sombrear_background_storie3()
 }
@@ -224,9 +224,9 @@ function storie_number_four(){
     console.log("Story 4")
     active_storie = 4;
 
-    storie_image.src = "./resources/tenis.jpg"
+    storie_image.src = "./resources/work.jpg"
     active_storie_img.src = "./resources/jose.jpg"
-    active_storie_username.textContent = "Victor Williams"
+    active_storie_username.textContent = "Abhas Khanal"
 
     sombrear_background_storie4()
 }
@@ -237,7 +237,7 @@ function storie_number_five(){
 
     storie_image.src = "./resources/soraya_storie.jpg" 
     active_storie_img.src = "./resources/soraya.jpg"
-    active_storie_username.textContent = "Sophie Davis"
+    active_storie_username.textContent = "Sikshya Bista"
 
     sombrear_background_storie5()
 }
@@ -246,9 +246,9 @@ function storie_number_six(){
     console.log("Story 6")
     active_storie = 6;
 
-    storie_image.src = "" 
-    active_storie_img.src = ""
-    active_storie_username.textContent = ""
+    storie_image.src = "./resources/wheel.jpg" 
+    active_storie_img.src = "./resources/daniel.jpg"
+    active_storie_username.textContent = "Keshav Jha"
 
     sombrear_background_storie6()
 }
