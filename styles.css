@@ -22,7 +22,7 @@ html{
 .body-space {
   background-color: #f0f2f5;
   width: 56.5%;
-  min-height: 100vh;
+  min-height: 200vh;
   margin-left: 21.5vw;
 }
 
@@ -192,7 +192,7 @@ html{
   overflow: scroll;
 }
 .lateral_panel-container {
-  height: 95%;
+  height: 100vh;
   width: 95%;
   margin: 3% 1% 2% 1%;
 }

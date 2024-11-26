@@ -173,6 +173,7 @@ const active_storie_img = document.querySelector(".active_storie_img")
 const link = document.querySelector(".link")
 const active_storie_username = document.querySelector(".active_storie-username")
 const sponsor_username = document.querySelector(".sponsor")
+const verify_icon = document.querySelector(".verify-icon")
 const button = document.querySelector(".click-button")
 
 function storie_number_one(){
@@ -195,6 +196,8 @@ function storie_number_two(){
     active_storie_img.src = "./resources/telerivetlogo.png"
     active_storie_username.textContent = "Telerivet"
     sponsor_username.textContent= "Sponsored"
+    verify_icon.classList.add("material-symbols-sharp")
+    verify_icon.textContent="verified"
     button.textContent="CONTACT US"
     button.style.position="absolute";
     button.style.top= "90%";
@@ -297,6 +300,7 @@ function resetImageID() {
         link.removeAttribute("href")
         button.textContent=""
         button.removeAttribute("style");
+        verify_icon.textContent=""
 
     }
 

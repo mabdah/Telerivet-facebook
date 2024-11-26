@@ -127,7 +127,7 @@ function make_post(){
         div_element.classList.add(`publication_${post_num}`)  
         posts_container.insertBefore(div_element, before_element) //<!--Asking the document to insert the new post before the previous one-->
         const new_post = document.querySelector(`.publication_${post_num}`)
-        new_post.innerHTML = posting_template;        
+        new_post.innerHTML = posting_template;  
         posting_text_container.value = ("");
         close_posting()
 
