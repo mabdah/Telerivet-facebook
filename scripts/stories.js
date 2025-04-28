@@ -18,7 +18,7 @@ storie3.addEventListener("click", open_storie3)
 storie4.addEventListener("click", open_storie4)
 storie5.addEventListener("click", open_storie5)
 
-function aparece(){    
+function aparece() {
     chat_panel.classList.add("hidden")
     logo_container.classList.add("separating")
     storie_close.classList.remove("storie_close_disappear")
@@ -28,26 +28,26 @@ function aparece(){
     stories_background.classList.remove("hidden")
 }
 
-function open_storie1(){
+function open_storie1() {
     aparece()
     select_storie(1);
 }
-function open_storie2(){
+function open_storie2() {
     aparece()
     select_storie(2)
 }
 
-function open_storie3(){
+function open_storie3() {
     aparece()
     select_storie(3)
 }
 
-function open_storie4(){
+function open_storie4() {
     aparece()
     select_storie(4)
 }
 
-function open_storie5(){
+function open_storie5() {
     aparece()
     select_storie(5)
 }
@@ -58,7 +58,7 @@ function open_storie5(){
 
 storie_close.addEventListener("click", desaparece)
 
-function desaparece(){
+function desaparece() {
     chat_panel.classList.remove("hidden")
     logo_container.classList.remove("separating")
     storie_close.classList.add("storie_close_disappear")
@@ -79,16 +79,16 @@ const st_play_button = document.getElementById("play_button")
 let state = "playing";
 st_play_button.addEventListener("click", reproducir_pausar)
 
-function reproducir_pausar(){
-    if (state == "playing"){
+function reproducir_pausar() {
+    if (state == "playing") {
 
-        st_play_button.src="./resources/play_icon"
+        st_play_button.src = "./resources/play_icon"
         state = "paused";
         pausar_reproducir_historias(state)
 
-    } else if (state == "paused"){        
+    } else if (state == "paused") {
         state = "playing"
-        st_play_button.src="./resources/pause_icon"
+        st_play_button.src = "./resources/pause_icon"
         pausar_reproducir_historias(state)
     }
 }
@@ -101,12 +101,12 @@ storie_sound_state = "sonando";
 
 st_sound_button.addEventListener("click", silenciar_sonar)
 
-function silenciar_sonar(){
-    if (storie_sound_state == "sonando"){
-        st_sound_button.src=("./resources/sound_off_icon")
+function silenciar_sonar() {
+    if (storie_sound_state == "sonando") {
+        st_sound_button.src = ("./resources/sound_off_icon")
         storie_sound_state = "silenciado";
-    } else if (storie_sound_state == "silenciado"){
-        st_sound_button.src="./resources/sound_icon";
+    } else if (storie_sound_state == "silenciado") {
+        st_sound_button.src = "./resources/sound_icon";
         storie_sound_state = "sonando"
     }
 }
@@ -124,46 +124,46 @@ previous_storie.addEventListener("click", previous_storie_activate)
 
 var active_storie = 1;
 
-function next_storie_activate(){
-    if (active_storie < 6){
-        active_storie +=1;
+function next_storie_activate() {
+    if (active_storie < 6) {
+        active_storie += 1;
         select_storie(active_storie)
 
-    }        
+    }
 }
 
-function previous_storie_activate(){
-    if (active_storie > 1){
-        active_storie -=1;
+function previous_storie_activate() {
+    if (active_storie > 1) {
+        active_storie -= 1;
         select_storie(active_storie)
-    }   
+    }
 }
 
-function select_storie(active_storie){
-    switch (active_storie){
+function select_storie(active_storie) {
+    switch (active_storie) {
         case 1:
             storie_number_one()
-        break;
-    
+            break;
+
         case 2:
             storie_number_two()
-        break;
-    
+            break;
+
         case 3:
             storie_number_three()
-        break;
+            break;
 
         case 4:
             storie_number_four()
-        break;
+            break;
 
         case 5:
             storie_number_five()
-        break;
+            break;
 
         case 6:
             storie_number_six()
-        break;
+            break;
         default: storie_number_one()
     }
 }
@@ -176,51 +176,52 @@ const sponsor_username = document.querySelector(".sponsor")
 const verify_icon = document.querySelector(".verify-icon")
 const button = document.querySelector(".click-button")
 
-function storie_number_one(){
+function storie_number_one() {
     console.log("Story 1")
     active_storie = 1;
-   
-    storie_image.src = "./resources/mountain.jpg"   
+
+    storie_image.src = "./resources/mountain.jpg"
     active_storie_img.src = "./resources/profile.jpg"
     active_storie_username.textContent = "Agastaya KC"
 
     sombrear_background_storie1()
 }
 
-function storie_number_two(){
+function storie_number_two() {
     console.log("Story 2")
     active_storie = 2;
     storie_image.id = "sponsored-post";
-    link.href ="https://wa.me/14153166018?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20Telerivet's%20WhatsApp%20offerings."
-    storie_image.src = "./resources/post.jpg"  
-    active_storie_img.src = "./resources/telerivetlogo.png"
-    active_storie_username.textContent = "Telerivet"
-    sponsor_username.textContent= "Sponsored"
+    link.href = "https://wa.me/14153166018?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+    storie_image.src = "./resources/cover.png"
+    active_storie_img.src = "./resources/BharosaLogo.png"
+    active_storie_img.style.objectFit = "contain"
+    active_storie_username.textContent = "Bharosa Hospital Pvt Ltd"
+    sponsor_username.textContent = "Sponsored"
     verify_icon.classList.add("material-symbols-sharp")
-    verify_icon.textContent="verified"
-    button.textContent="CONTACT US"
-    button.style.position="absolute";
-    button.style.top= "90%";
-    button.style.left= "50%";
-    button.style.transform="translate(-50%, -50%)";
-    button.style.Zindex="7";
-    button.style.cursor="pointer";
-   
+    verify_icon.textContent = "verified"
+    button.textContent = "CONTACT US"
+    button.style.position = "absolute";
+    button.style.top = "90%";
+    button.style.left = "50%";
+    button.style.transform = "translate(-50%, -50%)";
+    button.style.Zindex = "7";
+    button.style.cursor = "pointer";
+
     sombrear_background_storie2()
 }
 
-function storie_number_three(){
+function storie_number_three() {
     console.log("Story 3")
     active_storie = 3;
-    
-    storie_image.src = "./resources/coffee.jpg" 
+
+    storie_image.src = "./resources/coffee.jpg"
     active_storie_img.src = "./resources/abilio.jpg"
     active_storie_username.textContent = "Reshika Pradhan"
 
     sombrear_background_storie3()
 }
 
-function storie_number_four(){
+function storie_number_four() {
     console.log("Story 4")
     active_storie = 4;
 
@@ -231,22 +232,22 @@ function storie_number_four(){
     sombrear_background_storie4()
 }
 
-function storie_number_five(){
+function storie_number_five() {
     console.log("Story 5")
     active_storie = 5;
 
-    storie_image.src = "./resources/soraya_storie.jpg" 
+    storie_image.src = "./resources/soraya_storie.jpg"
     active_storie_img.src = "./resources/soraya.jpg"
     active_storie_username.textContent = "Sikshya Bista"
 
     sombrear_background_storie5()
 }
 
-function storie_number_six(){
+function storie_number_six() {
     console.log("Story 6")
     active_storie = 6;
 
-    storie_image.src = "./resources/wheel.jpg" 
+    storie_image.src = "./resources/wheel.jpg"
     active_storie_img.src = "./resources/daniel.jpg"
     active_storie_username.textContent = "Keshav Jha"
 
@@ -274,7 +275,7 @@ storie_6.addEventListener("click", storie_number_six)
 
 
 
-function sombrear_background_storie1(){
+function sombrear_background_storie1() {
     storie_1.classList.add("background_user-selected")
     storie_2.classList.remove("background_user-selected")
     storie_3.classList.remove("background_user-selected")
@@ -284,29 +285,29 @@ function sombrear_background_storie1(){
     resetImageID();
 }
 
-function sombrear_background_storie2(){
+function sombrear_background_storie2() {
     storie_1.classList.remove("background_user-selected")
     storie_2.classList.add("background_user-selected")
     storie_3.classList.remove("background_user-selected")
     storie_4.classList.remove("background_user-selected")
     storie_5.classList.remove("background_user-selected")
     storie_6.classList.remove("background_user-selected")
-   
+
 }
 function resetImageID() {
     if (storie_image.id) {
         storie_image.removeAttribute("id"); // Remove the ID
-        sponsor_username.textContent =""
+        sponsor_username.textContent = ""
         link.removeAttribute("href")
-        button.textContent=""
+        button.textContent = ""
         button.removeAttribute("style");
-        verify_icon.textContent=""
+        verify_icon.textContent = ""
 
     }
 
 }
 
-function sombrear_background_storie3(){
+function sombrear_background_storie3() {
     storie_1.classList.remove("background_user-selected")
     storie_2.classList.remove("background_user-selected")
     storie_3.classList.add("background_user-selected")
@@ -316,7 +317,7 @@ function sombrear_background_storie3(){
     resetImageID();
 }
 
-function sombrear_background_storie4(){
+function sombrear_background_storie4() {
     storie_1.classList.remove("background_user-selected")
     storie_2.classList.remove("background_user-selected")
     storie_3.classList.remove("background_user-selected")
@@ -326,7 +327,7 @@ function sombrear_background_storie4(){
     resetImageID();
 }
 
-function sombrear_background_storie5(){
+function sombrear_background_storie5() {
     storie_1.classList.remove("background_user-selected")
     storie_2.classList.remove("background_user-selected")
     storie_3.classList.remove("background_user-selected")
@@ -336,7 +337,7 @@ function sombrear_background_storie5(){
     resetImageID();
 }
 
-function sombrear_background_storie6(){
+function sombrear_background_storie6() {
     storie_1.classList.remove("background_user-selected")
     storie_2.classList.remove("background_user-selected")
     storie_3.classList.remove("background_user-selected")
