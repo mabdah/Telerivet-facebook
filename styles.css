@@ -3,6 +3,8 @@ body,
 figure {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 html {
