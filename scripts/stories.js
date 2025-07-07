@@ -192,10 +192,10 @@ function storie_number_two() {
     active_storie = 2;
     storie_image.id = "sponsored-post";
     link.href = "https://wa.me/14153166018?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20your%20services."
-    storie_image.src = "./resources/citizenpost.png"
-    active_storie_img.src = "./resources/citizenlogo.png"
+    storie_image.src = "./resources/medicitipost.png"
+    active_storie_img.src = "./resources/medicitilogo.png"
     active_storie_img.style.objectFit = "contain"
-    active_storie_username.textContent = "Citizen's Bank Int Ltd"
+    active_storie_username.textContent = "Nepal Mediciti"
     sponsor_username.textContent = "Sponsored"
     verify_icon.classList.add("material-symbols-sharp")
     verify_icon.textContent = "verified"
